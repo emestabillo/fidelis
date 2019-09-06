@@ -41,32 +41,26 @@ body {
   color: #ffffff;
   font-size: 2rem;
   line-height: 2.5rem;
+  box-shadow: 0px 1rem 0px 0px rgba(236, 234, 235, 1);
+  margin-bottom: 1rem;
 
-  /* display: grid;
-  grid-template-rows: repeat(2, min-content);
-  grid-row-gap: 1.5rem;
-  padding: 6rem 8vh; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-row-gap: 1rem;
 }
 
 .hero__text {
-  /* padding: 6rem 8vh; */
-  /* width: 60vw; */
   grid-column: 3 / span 4;
   display: grid;
   grid-template-rows: min-content;
   grid-row-gap: 1.5rem;
-  /* padding-top: 10vh; */
   align-self: center;
-  /* justify-content: center; */
 }
+
 @media only screen and (max-width: 905px) {
   .hero__text {
     grid-column: 3 / span 8;
     font-size: 80%;
-    /* padding-top: 7vh; */
   }
 }
 
@@ -75,10 +69,37 @@ body {
   font-size: 18pt;
   padding: 0.5rem 1rem;
   align-self: start;
-  /* justify-self: start; */
   border: 1px solid #0072ba;
 }
 
 .hero .btn:hover {
   background-color: #2a96da;
+}
+
+@media only screen and (max-width: 905px) {
+  .hero__btn {
+    margin-right: 11vw;
+  }
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.features__img--mountain {
+  grid-column: 1 / span 4;
+}
+
+.features__text--mountain {
+  grid-column: 5 / span 4;
+}
+
+.features__img--rabbit {
+  grid-column: 5 / span 4;
+}
+
+.features__text--rabbit {
+  grid-column: 1 / span 4;
 }
