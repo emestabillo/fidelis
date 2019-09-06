@@ -1,4 +1,4 @@
-/* GLOBAL */
+/* RESET */
 *,
 *::before,
 *::after {
@@ -7,6 +7,7 @@
   box-sizing: inherit;
 }
 
+/* GLOBAL */
 html {
   box-sizing: border-box;
 }
@@ -18,9 +19,9 @@ body {
 .btn {
   color: #fff;
   text-transform: uppercase;
-  font-size: 16pt;
+  font-size: 16px;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   cursor: pointer;
 }
 
@@ -46,12 +47,12 @@ footer {
   align-items: center;
 }
 
-header {
+header,
+.hero {
   grid-column: 1 / -1;
 }
 
 .hero {
-  grid-column: 1 / -1;
   background: url(./images/image1.jpg) center no-repeat;
   background-size: cover;
   color: #ffffff;
@@ -67,39 +68,23 @@ header {
 
 .hero__text {
   grid-column: 3 / span 4;
+  align-self: center;
+
   display: grid;
   grid-template-rows: min-content;
   grid-row-gap: 1.5rem;
-  align-self: center;
-}
-
-@media only screen and (max-width: 905px) {
-  .hero__text {
-    grid-column: 3 / span 8;
-    font-size: 80%;
-  }
 }
 
 .hero--btn {
   background-color: #0072ba;
-  font-size: 18pt;
+  font-size: 18px;
   align-self: start;
-}
-
-@media only screen and (max-width: 905px) {
-  .hero__btn {
-    margin-right: 11vw;
-  }
 }
 
 .images {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.mountain-img {
-  grid-column: 1 / span 4;
 }
 
 .features__text {
@@ -110,15 +95,19 @@ header {
 }
 
 .features__text h3 {
-  font-size: 18pt;
-  line-height: 24pt;
+  font-size: 18px;
+  line-height: 24px;
   color: #1e1944;
 }
 
 .features__text p {
-  font-size: 16pt;
-  line-height: 20pt;
+  font-size: 16px;
+  line-height: 20px;
   color: #656b72;
+}
+
+.mountain-img {
+  grid-column: 1 / span 4;
 }
 
 .mountain-text {
@@ -144,6 +133,45 @@ header {
 footer {
   grid-column: 1 / -1;
   background: #121921;
-  font-size: 13pt;
+  font-size: 13px;
   color: #fff;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 959px) {
+  .container {
+    grid-template-rows: 6rem repeat(4, 25rem) 28rem 6rem;
+  }
+
+  .mountain-img,
+  .rabbit-img {
+    grid-column: 1 / -1;
+  }
+
+  .mountain-text,
+  .rabbit-text {
+    grid-column: 2 / span 6;
+  }
+
+  .rabbit-img {
+    grid-row: 5;
+  }
+
+  .rabbit-text {
+    grid-row: 6;
+  }
+}
+
+@media only screen and (max-width: 905px) {
+  html {
+    font-size: 80%;
+  }
+
+  .hero__text {
+    grid-column: 3 / span 8;
+  }
+
+  .features__text {
+    grid-gap: 1.5rem;
+  }
 }
