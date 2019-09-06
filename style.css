@@ -12,7 +12,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 6rem 25rem repeat(2, 22.5rem) 6rem;
 }
 
@@ -21,4 +21,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+section {
+  font-family: Arial, Helvetica, sans-serif;
 }
