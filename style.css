@@ -49,6 +49,7 @@ body {
 .container > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
 }
 .container > *:nth-child(2) {
   -ms-grid-row: 1;
@@ -223,6 +224,7 @@ footer {
 header,
 .hero {
   grid-column: 1 / -1;
+  -ms-grid-column: ;
 }
 
 .hero {
