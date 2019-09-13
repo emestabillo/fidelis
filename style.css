@@ -60,8 +60,7 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
-}
-/*
+} 
 .container > *:nth-child(4) {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
@@ -211,7 +210,7 @@ body {
   -ms-grid-column: 8;
 } */
 
-/* header,
+header,
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,7 +365,7 @@ footer {
   background: #121921;
   font-size: 0.8125rem;
   color: #fff;
-}
+} */
 
 /* MEDIA QUERIES */
 /* @media only screen and (max-width: 959px) {
@@ -426,4 +425,4 @@ footer {
   .features__text {
     grid-gap: 1.5rem;
   }
-} */
+}
