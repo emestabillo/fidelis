@@ -133,6 +133,7 @@ header {
   background-color: #0072ba;
   font-size: 1.125rem;
   align-self: start;
+  -ms-width: 100%;
 }
 
 .images {
@@ -210,6 +211,21 @@ footer {
 }
 
 /* MEDIA QUERIES */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .hero--btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .hero__text {
+    transform: translateY(75%);
+  }
+
+  .features__text h3, .features__text p {
+    padding-bottom: 1rem;
+  }
+}
+
 @supports (grid-gap: 0) {
   .hero__text,
   .features__text {
@@ -288,3 +304,6 @@ footer {
     -ms-grid-column-span: 8;
   }
 }
+
+button width: 100%, margintop 1rem
+hero text: translatey 75%
