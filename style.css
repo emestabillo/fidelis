@@ -119,13 +119,16 @@ header {
   top: 25rem;
   background: rgba(236, 234, 235, 1);
 }
+.hero__text {
+  justify-self: center;
+}
 
 .hero__text,
 .features__text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-content: space-between;
 }
 
 .hero__text {
