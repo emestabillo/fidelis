@@ -119,30 +119,19 @@ header {
   top: 25rem;
   background: rgba(236, 234, 235, 1);
 }
-.hero__text {
-  justify-self: center;
-}
-
-.hero__text,
-.features__text {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: space-between;
-}
 
 .hero__text {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
+  align-self: center;
+  -ms-transform: translateY(100%);
   grid-area: hero-txt;
 }
 
 .hero--btn {
   background-color: #0072ba;
   font-size: 1.125rem;
-  -ms-flex-item-align: start;
-  -ms-grid-row-align: start;
   align-self: start;
 }
 
@@ -153,16 +142,25 @@ header {
   object-fit: cover;
 }
 
+.features__text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
 .features__text h3 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   color: #1e1944;
+  -ms-padding-bottom: 1rem;
 }
 
 .features__text p {
   font-size: 1rem;
   line-height: 1.25rem;
   color: #656b72;
+  -ms-padding-bottom: 1rem;
 }
 
 .mountain-img {
