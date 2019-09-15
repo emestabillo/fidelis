@@ -124,7 +124,8 @@ header {
 .features__text {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__text {
