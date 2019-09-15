@@ -120,21 +120,18 @@ header {
   background: rgba(236, 234, 235, 1);
 }
 
+.hero__text,
+.features__text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
 .hero__text {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: hero-txt;
-  -ms-grid-row-align: center;
-  align-self: center;
-
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: -webkit-min-content;
-  -ms-grid-rows: min-content 1.5rem min-content;
-  grid-template-rows: -webkit-min-content;
-  grid-template-rows: min-content;
-  grid-row-gap: 1.5rem;
 }
 
 .hero--btn {
@@ -150,18 +147,6 @@ header {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.features__text {
-  -ms-grid-row-align: center;
-  align-self: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: -webkit-min-content;
-  -ms-grid-rows: min-content 1rem min-content 1rem min-content;
-  grid-template-rows: -webkit-min-content;
-  grid-template-rows: min-content;
-  grid-gap: 1rem;
 }
 
 .features__text h3 {
@@ -223,6 +208,15 @@ footer {
 }
 
 /* MEDIA QUERIES */
+@supports (grid-gap: 0) {
+  .hero__text,
+  .features__text {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-gap: 1rem;
+  }
+}
+
 @media only screen and (max-width: 959px) {
   .container {
     -ms-grid-rows: 5rem 25rem 25rem 25rem 25rem 28rem 5rem;
